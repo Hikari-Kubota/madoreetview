@@ -1,12 +1,6 @@
-// 部屋を辿るルートを表現するグラフ(JSON形式)
-var graphData = {
-	0: {
-		"id": 0,
-		"adjNode": {},
-		"coord": {"x": null, "y": null},
-	}
-};
-
 (function(){
-	alert(image.test);
+    console.log("start!");
+    console.log(graph.node);
+    graph.setNode(0);
+    console.log(graph.node);
 })();
