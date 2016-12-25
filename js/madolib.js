@@ -79,11 +79,17 @@ var image = (function() {
         geometry.scale(-1, 1, 1);
 
         var material = new THREE.MeshBasicMaterial( {
-            map: THREE.ImageUtils.loadTexture( 'https://raw.githubusercontent.com/Hikari-Kubota/madoreetview/master/imgs/theta'+id+'.jpg' )
+            map: THREE.ImageUtils.loadTexture( 'imgs/test/theta'+id+'.jpg' )
         });
 
         sphere = new THREE.Mesh( geometry, material );
         scene.add( sphere );
+
+        geometry = new THREE.CubeGeometry(1,1,1);
+        material = new THREE.MeshBasicMaterial( { color: 0x00ff00 } );
+        cube = new THREE.Mesh( geometry, material );
+        cube.position.set(0,0,-5);
+        scene.add( cube );
 
         //camera
         var camera = new THREE.PerspectiveCamera(75, width / height, 1, 1000);
